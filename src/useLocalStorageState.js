@@ -9,6 +9,7 @@ export function useLocalStorageState(initialState, key) {
     return watchedMovies;
   });
 
+  console.log(localStorage.getItem(key));
   useEffect(
     function () {
       localStorage.setItem("value", JSON.stringify(value));
