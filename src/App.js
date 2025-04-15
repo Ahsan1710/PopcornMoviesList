@@ -10,7 +10,6 @@ const average = (arr) =>
 const key = "d5e63c6a";
 
 export default function App() {
-  console.log(localStorage.getItem("watched"));
   const [query, setQuery] = useState("");
   const [selectedID, setSelectedID] = useState(null);
 

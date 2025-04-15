@@ -9,12 +9,11 @@ export function useLocalStorageState(initialState, key) {
     return watchedMovies;
   });
 
-  console.log(localStorage.getItem(key));
   useEffect(
     function () {
-      localStorage.setItem("value", JSON.stringify(value));
+      localStorage.setItem(key, JSON.stringify(value));
     },
-    [value]
+    [value, key]
   );
 
   return [value, setValue];
